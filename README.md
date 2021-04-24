@@ -1,2 +1,2 @@
 # chaotic-resemblance-mobile
-Chaotic Resemblance Mobile app
+Chaotic Resemblance mobile app
