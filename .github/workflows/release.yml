@@ -15,4 +15,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           create_annotated_tag : true
           tag_prefix : 'v-'
-          append_to_pre_release_tag: ''
+          append_to_pre_release_tag: 'pr'
