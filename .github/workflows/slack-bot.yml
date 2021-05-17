@@ -1,3 +1,4 @@
+# a slack bot to post info about pull requests
 name: Slack Notifications
 
 on:
