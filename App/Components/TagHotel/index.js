@@ -3,39 +3,41 @@ import {
   View,
   Text,
   ScrollView,
-  BackHandler,
   Image,
-  Easing,
+  Button,
 } from "react-native";
-import { Header, Left, Right, Body, Container } from "native-base";
+import { Container } from "native-base";
 import { Metrics, Images } from "../../Themes";
 import styles from "./styles";
 import Entypo from "react-native-vector-icons/Entypo";
-import Rating from "react-native-rating";
 
 var dataObjects = [
   {
     id: 0,
-    HotelName: "Pear Tree Hotell",
-    HotelPrice: "$ 7665",
+    VenueName: "Red Rocks Performing Arts Center",
+    CityState: "George, WA",
+    Address: "754 Silica Rd NW, George, WA 98848",
     HotelImg: Images.hotel_ic_four,
   },
   {
     id: 1,
-    HotelName: "Hilton Hotel & Resort",
-    HotelPrice: "$ 524",
+    VenueName: "Saratoga Springs Performing Arts Center",
+    CityState: "George, WA",
+    Address: "754 Silica Rd NW, George, WA 98848",
     HotelImg: Images.hotel_three,
   },
   {
     id: 2,
-    HotelName: "San Francisco",
-    HotelPrice: "$ 1,289",
+    VenueName: "Gorge Amphitheatre",
+    CityState: "George, WA",
+    Address: "754 Silica Rd NW, George, WA 98848",
     HotelImg: Images.hotel_ic_three,
   },
   {
     id: 3,
-    HotelName: "Kempinski Hotel CA",
-    HotelPrice: "$ 987",
+    VenueName: "Wrigley Field",
+    CityState: "George, WA",
+    Address: "754 Silica Rd NW, George, WA 98848",
     HotelImg: Images.hotel_one,
   },
 ];
@@ -43,33 +45,11 @@ var dataObjects = [
 export default class TagHotel extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      cardnumber: "008 7906 5800 4444",
-      cardholdername: "Martina Breslin",
-      expdate: "04/16",
-      ccv: "123",
-    };
   }
-
-  componentWillMount() {
-    BackHandler.addEventListener("hardwareBackPress", this.backPressed);
-  }
-
-  componentWillUnmount() {
-    BackHandler.removeEventListener("hardwareBackPress", this.backPressed);
-  }
-
-  backPressed = () => {
-    this.props.navigation.navigate("FirstScreen");
-    return true;
-  };
 
   render() {
     return (
       <Container style={{ backgroundColor: "#263238" }}>
-
-
         <View style={styles.mainViewContent}>
           <ScrollView>
             {dataObjects.map((item, index) => {
@@ -84,7 +64,7 @@ export default class TagHotel extends Component {
                     <Image source={item.HotelImg} style={styles.HotelImg} />
 
                     <View>
-                      <Text style={styles.HotelNameText}>{item.HotelName}</Text>
+                      <Text style={styles.HotelNameText}>{item.VenueName}</Text>
                       <View
                         style={{
                           flexDirection: "row",
@@ -93,54 +73,23 @@ export default class TagHotel extends Component {
                       >
                         <Entypo name="location-pin" size={14} color="#7cb342" />
                         <Text style={styles.LocationText}>
-                          San Francisco, CA
+                          {item.CityState}
                         </Text>
                       </View>
                       <View style={{ flexDirection: "row" }}>
-                        <Rating
-                          initial={5}
-                          onChange={(rating) => console.log(rating)}
-                          selectedStar={Images.starFilled1}
-                          config={{
-                            easing: Easing.inOut(Easing.ease),
-                            duration: 350,
-                          }}
-                          stagger={80}
-                          maxScale={2.4}
-                          starStyle={[
-                            styles.ratingStar,
-                            { alignSelf: "center" },
-                          ]}
-                          editable={false}
-                        />
-                        <Text style={styles.RatingText}>Rating</Text>
-                        <Text style={styles.RatingCountText}>85 of 100</Text>
+                        <Text style={styles.RatingText}>{item.Address}</Text>
                       </View>
-
                       <View
                         style={{
                           flexDirection: "row",
-                          width: Metrics.WIDTH * 0.3,
-                        }}
-                      >
-                        {item.id == 0 ? (
-                          <View style={{ flexDirection: "row" }}>
-                            <Text style={styles.CheckedPriceText}>$ 1,098</Text>
-                          </View>
-                        ) : null}
-
-                        {item.id == 1 ? (
-                          <View style={{ flexDirection: "row" }}>
-                            <Text style={styles.CheckedPriceText}>$ 1,098</Text>
-                          </View>
-                        ) : null}
-                        <Text style={styles.RatingHotelNameText}>
-                          {item.HotelPrice}
-                        </Text>
-                      </View>
-
-                      <View style={{ width: Metrics.WIDTH * 0.3 }}>
-                        <Text style={styles.AvgNightText}>AVG/NIGHT</Text>
+                          width: Metrics.WIDTH * 0.5,
+                          marginLeft: Metrics.WIDTH * 0.02,
+                          marginTop: Metrics.WIDTH * 0.01
+                        }}>
+                        <Button
+                          title="Buy Tickets"
+                          color="#8b0e0e"
+                        />
                       </View>
                     </View>
                   </View>
