@@ -1,4 +1,6 @@
-export default Venues = [
+import { Images } from "../../Themes";
+
+const venues = [
     {
       id: 0,
       VenueName: "Red Rocks Amphitheatre",
@@ -28,3 +30,5 @@ export default Venues = [
       VenueImg: Images.hollywood,
     },
   ];
+
+export default venues;
