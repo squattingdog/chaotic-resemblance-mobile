@@ -7,7 +7,7 @@ import {
   Button,
 } from "react-native";
 import { Container } from "native-base";
-import { Metrics, Images } from "../../Themes";
+import { Metrics, Images, Colors } from "../../Themes";
 import styles from "./styles";
 import venues from "./venues";
 
@@ -56,7 +56,7 @@ export default class EventListContainer extends Component {
                         }}>
                         <Button
                           title="Buy Tickets"
-                          color="#8b0e0e"
+                          color={Colors.red}
                         />
                       </View>
                     </View>

@@ -41,7 +41,7 @@ const colors = {
 
   //WooCommerce Color
   veryLightGray: "#dcdcdc",
-  red: 'red',
+  red: '#8b0e0e',
   white: 'white',
   lightGray: '#959595',
   yellow: '#ffc700',
