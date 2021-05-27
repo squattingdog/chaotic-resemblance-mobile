@@ -14,31 +14,31 @@ import Entypo from "react-native-vector-icons/Entypo";
 var dataObjects = [
   {
     id: 0,
-    VenueName: "Red Rocks Performing Arts Center",
-    CityState: "George, WA",
-    Address: "754 Silica Rd NW, George, WA 98848",
-    HotelImg: Images.hotel_ic_four,
+    VenueName: "Red Rocks Amphitheatre",
+    CityState: "Morrison, CO",
+    Date: "8-30-2021",
+    HotelImg: Images.redrocks,
   },
   {
     id: 1,
     VenueName: "Saratoga Springs Performing Arts Center",
-    CityState: "George, WA",
-    Address: "754 Silica Rd NW, George, WA 98848",
-    HotelImg: Images.hotel_three,
+    CityState: "Saratoga Springs, NY",
+    Date: "10-30-2021",
+    HotelImg: Images.spac,
   },
   {
     id: 2,
     VenueName: "Gorge Amphitheatre",
     CityState: "George, WA",
-    Address: "754 Silica Rd NW, George, WA 98848",
-    HotelImg: Images.hotel_ic_three,
+    Date: "11-5-2021",
+    HotelImg: Images.gorge,
   },
   {
     id: 3,
-    VenueName: "Wrigley Field",
-    CityState: "George, WA",
-    Address: "754 Silica Rd NW, George, WA 98848",
-    HotelImg: Images.hotel_one,
+    VenueName: "The Hollywood Bowl",
+    CityState: "Los Angeles, CA",
+    Date: "12-2-2021",
+    HotelImg: Images.hollywood,
   },
 ];
 
@@ -69,15 +69,16 @@ export default class TagHotel extends Component {
                         style={{
                           flexDirection: "row",
                           marginLeft: Metrics.HEIGHT * 0.01,
-                        }}
-                      >
+                        }}>
                         <Image source={Images.googlemaps} style={styles.LocationPin} />
                         <Text style={styles.LocationText}>
                           {item.CityState}
                         </Text>
                       </View>
-                      <View style={{ flexDirection: "row" }}>
-                        <Text style={styles.RatingText}>{item.Address}</Text>
+                      <View style={{ flexDirection: "row",
+                          marginLeft: Metrics.HEIGHT * 0.015, }}>
+                      <Image source={Images.calendar} style={styles.Calendar} />
+                        <Text style={styles.RatingText}>{item.Date}</Text>
                       </View>
                       <View
                         style={{

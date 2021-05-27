@@ -45,6 +45,11 @@ const styles = StyleSheet.create({
     width: Metrics.WIDTH * 0.0513
   },
 
+  Calendar: {
+    height: Metrics.HEIGHT * 0.03,
+    width: Metrics.WIDTH * 0.04
+  },
+
   HotelNameText: {
     color: "#1d262a",
     fontFamily: Fonts.type.LatoBold,
