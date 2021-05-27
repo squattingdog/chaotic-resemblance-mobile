@@ -47,6 +47,23 @@ const styles = StyleSheet.create({
     width: Metrics.WIDTH * 0.5,
   },
 
+  Tickets : {
+    flexDirection: "row",
+    width: Metrics.WIDTH * 0.5,
+    marginLeft: Metrics.WIDTH * 0.02,
+    marginTop: Metrics.WIDTH * 0.01
+  },
+
+  MapsRow: {
+    flexDirection: "row",
+    marginLeft: Metrics.HEIGHT * 0.01,
+  },
+
+  CalendarRow : { 
+    flexDirection: "row",
+    marginLeft: Metrics.HEIGHT * 0.015,
+  },
+
   LocationText: {
     color: "#1d262a",
     fontFamily: Fonts.type.LatoRegular,

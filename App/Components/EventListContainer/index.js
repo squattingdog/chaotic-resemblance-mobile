@@ -1,11 +1,5 @@
 import React, { Component } from "react";
-import {
-  View,
-  Text,
-  ScrollView,
-  Image,
-  Button,
-} from "react-native";
+import { View, Text, ScrollView, Image, Button} from "react-native";
 import { Container } from "native-base";
 import { Metrics, Images, Colors } from "../../Themes";
 import styles from "./styles";
@@ -33,27 +27,18 @@ export default class EventListContainer extends Component {
                     <View>
                       <Text style={styles.VenueNameText}>{item.VenueName}</Text>
                       <View
-                        style={{
-                          flexDirection: "row",
-                          marginLeft: Metrics.HEIGHT * 0.01,
-                        }}>
+                        style={styles.MapsRow}>
                         <Image source={Images.googlemaps} style={styles.LocationPin} />
                         <Text style={styles.LocationText}>
                           {item.CityState}
                         </Text>
                       </View>
-                      <View style={{ flexDirection: "row",
-                          marginLeft: Metrics.HEIGHT * 0.015, }}>
-                      <Image source={Images.calendar} style={styles.Calendar} />
+                      <View style={styles.CalendarRow}>
+                        <Image source={Images.calendar} style={styles.Calendar} />
                         <Text style={styles.CalendarText}>{item.Date}</Text>
                       </View>
                       <View
-                        style={{
-                          flexDirection: "row",
-                          width: Metrics.WIDTH * 0.5,
-                          marginLeft: Metrics.WIDTH * 0.02,
-                          marginTop: Metrics.WIDTH * 0.01
-                        }}>
+                        style={styles.Tickets}>
                         <Button
                           title="Buy Tickets"
                           color={Colors.red}
