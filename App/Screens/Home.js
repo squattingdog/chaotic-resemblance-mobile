@@ -5,9 +5,7 @@ const HomeScreen = function HomeScreen({ navigation }) {
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
             <View>
-                <Button
-                    title="Go to Event Details"
-                    onPress={() => navigation.navigate('Details')} />
+                <Text>Add an image header and text</Text>
             </View>
         </View>
     );
