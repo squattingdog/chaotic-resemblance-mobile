@@ -9,6 +9,7 @@ import {
 import { Container } from "native-base";
 import { Metrics, Images } from "../../Themes";
 import styles from "./styles";
+import Venues from "./venues";
 
 var dataObjects = [
   {
@@ -16,32 +17,32 @@ var dataObjects = [
     VenueName: "Red Rocks Amphitheatre",
     CityState: "Morrison, CO",
     Date: "8-30-2021",
-    HotelImg: Images.redrocks,
+    VenueImg: Images.redrocks,
   },
   {
     id: 1,
     VenueName: "Saratoga Springs Performing Arts Center",
     CityState: "Saratoga Springs, NY",
     Date: "10-30-2021",
-    HotelImg: Images.spac,
+    VenueImg: Images.spac,
   },
   {
     id: 2,
     VenueName: "Gorge Amphitheatre",
     CityState: "George, WA",
     Date: "11-5-2021",
-    HotelImg: Images.gorge,
+    VenueImg: Images.gorge,
   },
   {
     id: 3,
     VenueName: "The Hollywood Bowl",
     CityState: "Los Angeles, CA",
     Date: "12-2-2021",
-    HotelImg: Images.hollywood,
+    VenueImg: Images.hollywood,
   },
 ];
 
-export default class TagHotel extends Component {
+export default class EventListContainer extends Component {
   constructor(props) {
     super(props);
   }
@@ -59,9 +60,9 @@ export default class TagHotel extends Component {
                       flexDirection: "row",
                       marginBottom: Metrics.HEIGHT * 0.03,
                     }}>
-                    <Image source={item.HotelImg} style={styles.HotelImg} />
+                    <Image source={item.VenueImg} style={styles.VenueImg} />
                     <View>
-                      <Text style={styles.HotelNameText}>{item.VenueName}</Text>
+                      <Text style={styles.VenueNameText}>{item.VenueName}</Text>
                       <View
                         style={{
                           flexDirection: "row",
@@ -75,7 +76,7 @@ export default class TagHotel extends Component {
                       <View style={{ flexDirection: "row",
                           marginLeft: Metrics.HEIGHT * 0.015, }}>
                       <Image source={Images.calendar} style={styles.Calendar} />
-                        <Text style={styles.RatingText}>{item.Date}</Text>
+                        <Text style={styles.CalendarText}>{item.Date}</Text>
                       </View>
                       <View
                         style={{
