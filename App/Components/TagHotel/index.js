@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import {
   View,
   Text,
-  Platform,
-  StatusBar,
-  TouchableOpacity,
   ScrollView,
   BackHandler,
   Image,
@@ -14,7 +11,6 @@ import { Header, Left, Right, Body, Container } from "native-base";
 import { Metrics, Images } from "../../Themes";
 import styles from "./styles";
 import Entypo from "react-native-vector-icons/Entypo";
-import FontAwesome from "react-native-vector-icons/FontAwesome";
 import Rating from "react-native-rating";
 
 var dataObjects = [
@@ -72,29 +68,7 @@ export default class TagHotel extends Component {
   render() {
     return (
       <Container style={{ backgroundColor: "#263238" }}>
-        <Header style={styles.HeaderBg} transparent>
-          <Left style={styles.left}>
-            <TouchableOpacity
-              onPress={() => this.props.navigation.navigate("FirstScreen")}
-            >
-              <Entypo name="chevron-thin-left" color="#FFFFFF" size={25} />
-            </TouchableOpacity>
-          </Left>
-          <Body style={styles.body}>
-            <Image
-              style={{
-                height: Metrics.WIDTH * 0.1,
-                width: Metrics.WIDTH * 0.1,
-                marginLeft: Metrics.WIDTH * 0.03,
-                marginRight: Metrics.WIDTH * 0.05,
-                resizeMode: "contain",
-              }}
-              source={Images.beliconheader}
-            />
-            <Text style={styles.headertitle}>Hilton Hotel & Resort</Text>
-          </Body>
-          <Right style={styles.right} />
-        </Header>
+
 
         <View style={styles.mainViewContent}>
           <ScrollView>
