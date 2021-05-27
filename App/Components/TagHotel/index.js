@@ -9,7 +9,6 @@ import {
 import { Container } from "native-base";
 import { Metrics, Images } from "../../Themes";
 import styles from "./styles";
-import Entypo from "react-native-vector-icons/Entypo";
 
 var dataObjects = [
   {
@@ -54,15 +53,13 @@ export default class TagHotel extends Component {
           <ScrollView>
             {dataObjects.map((item, index) => {
               return (
-                <View>
+                <View key={index}>
                   <View
                     style={{
                       flexDirection: "row",
                       marginBottom: Metrics.HEIGHT * 0.03,
-                    }}
-                  >
+                    }}>
                     <Image source={item.HotelImg} style={styles.HotelImg} />
-
                     <View>
                       <Text style={styles.HotelNameText}>{item.VenueName}</Text>
                       <View
