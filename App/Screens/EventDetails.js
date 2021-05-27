@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, View } from 'react-native';
+import TagHotel from './../Components/TagHotel';
 
 const EventDetailsScreen = function EventDetailsScreen() {
     return (
