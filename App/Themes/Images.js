@@ -1,4 +1,5 @@
 const images = {
+  googlemaps: require("../Images/googlemaps.png"),
   drawer_antiquruby_logo: require("../Images/drawer_logo.png"),
   activeCategory: require("../Images/activeCategory.png"),
   activeGift: require("../Images/activeGift.png"),

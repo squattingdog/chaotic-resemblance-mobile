@@ -40,6 +40,11 @@ const styles = StyleSheet.create({
     marginLeft: Metrics.HEIGHT * 0.04,
   },
 
+  LocationPin: {
+    height: Metrics.HEIGHT * 0.03,
+    width: Metrics.WIDTH * 0.0513
+  },
+
   HotelNameText: {
     color: "#1d262a",
     fontFamily: Fonts.type.LatoBold,

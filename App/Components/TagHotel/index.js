@@ -71,7 +71,7 @@ export default class TagHotel extends Component {
                           marginLeft: Metrics.HEIGHT * 0.01,
                         }}
                       >
-                        <Entypo name="location-pin" size={14} color="#7cb342" />
+                        <Image source={Images.googlemaps} style={styles.LocationPin} />
                         <Text style={styles.LocationText}>
                           {item.CityState}
                         </Text>
